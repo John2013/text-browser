@@ -2,7 +2,7 @@
 
 just prints web pages as text in console
 
-##Installation
+## Installation
 
 0. Install Python3.8 or newer
 1. Create a virtual environment if you want
