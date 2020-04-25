@@ -65,7 +65,7 @@ pages_dir = sys.argv[1] if len(sys.argv) > 1 else "pages"
 history: List[str] = []
 
 while True:
-    url = input().lower()
+    url = input("> ").lower()
     if url == "exit":
         exit()
     elif url == "back":
