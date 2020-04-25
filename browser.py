@@ -46,6 +46,7 @@ def get_page(url: str):
     if result.ok:
         return parse_html(result.text)
     else:
+        print(f"error: {result.status_code}\n{result.text}")
         return False
 
 
@@ -76,8 +77,10 @@ while True:
             print("")
     elif is_url_valid(url):
         page_text = get_page(url)
+        if not page_text:
+            continue
         save_page(pages_dir, url, page_text)
         print_file(pages_dir, url)
         history.append(url)
     else:
-        print_file(pages_dir, url)
+        print("error: wrong url")
